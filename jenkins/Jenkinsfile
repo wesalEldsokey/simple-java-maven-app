@@ -17,6 +17,7 @@ node {
                 echo "error"
         }
         finally{
+                echo currentBuild.result
                 if (currentBuild.result=="SUCCESS") {
                         echo "successful pipeline"
                 }
