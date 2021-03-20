@@ -17,9 +17,9 @@ node {
                 echo "error"
         }
         finally{
-
+                if (currentBuild.result=="SUCCESS") {
                         echo "successful pipeline"
-                
+                }
         
         }
         stage('Deliver') {
