@@ -6,15 +6,20 @@ node {
                 sh 'echo hi'
 
         }
+        try{
         stage('Test') {
 
                 sh 'echo testing'
-
-            post {
-                always {
-                    sh 'echo results'
+        }
+        }
+        catch(e){
+                echo "error"
+        }
+        finally{
+                if (currentBuild.result == 'SUCCESS') {
+                        echo "success"
                 }
-            }
+        
         }
         stage('Deliver') {
 
