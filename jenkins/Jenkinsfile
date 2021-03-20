@@ -4,6 +4,7 @@ node {
         stage('Build') {
 
                 sh 'echo hi'
+                sh 'ls'
 
         }
         try{
