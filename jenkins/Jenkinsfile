@@ -1,15 +1,15 @@
-pipeline {
-    agent any
-    stages {
+node {
+
+
         stage('Build') {
-            steps {
+
                 sh 'echo hi'
-            }
+
         }
         stage('Test') {
-            steps {
+
                 sh 'echo testing'
-            }
+
             post {
                 always {
                     sh 'echo results'
@@ -17,9 +17,9 @@ pipeline {
             }
         }
         stage('Deliver') {
-            steps {
+
                 sh 'echo test branch'
-            }
+
         }
-    }
+    
 }
